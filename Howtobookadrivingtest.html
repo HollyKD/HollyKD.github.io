@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Howtobookstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="howtobookapp.js"></script>
+    <title>Automatic Driving Test Checker</title>
+</head>
+<body>
+    <header>
+        <h1 id="logo">Driving Test Cancellations</h1>
+        <nav>
+            <ul id="nav-ul">
+                <li><a href="index.html" class="navbutton" >Home</a></li>
+                <li><a href="Checknow.html" class="navbutton" >Check Now</a></li>
+                <li><a href="Aboutus.html" class="navbutton" >About Us</a></li>
+                <li><a href="Contact.html" class="navbutton" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Driving Test Cancellation Checker</h1>
+    <main>
+    <h2 id="title">How to Book a Driving Test</h2>
+    <article>
+   <h3 class="title2">Booking a First Test</h3>
+    <nav>
+        <ol>
+            <div>
+            <li><a href="https://www.gov.uk/book-driving-test" class="steps">Go to the DVSA website booking facility</a></li></div>
+            <li><a href="" class="steps">Enter your driving license number</a></li>
+            <li><a href="" class="steps">Choose an available date</a></li>
+            <li><a href="" class="steps">Pay the fee and fill in your details</a></li>
+            <li><a href="" class="steps">Receive email confirmation</a></li>
+        </ol>
+    </nav>
+    </article>
+    <img src="https://pin.it/1E9GReLVO" alt="A Car Tyre">
+    <article>
+   <h3 class="title2">Booking a Cancellation</h3>
+<nav>
+    <ol>
+        <div>
+        <li id="step1"><a href="" class="steps"></a>Go to the <a href="https://www.gov.uk/change-driving-test" target="_blank">DVSA website change booking</a> facility</li></div>
+        <li><a href="" class="steps">Enter your driving license number and booking reference</a></li>
+        <li><a href="" class="steps">Find a date that suits you and confirm, this can be done up to 6 times before cancellation is necessary to change and fee is returned any time so long as it is not within the 3 working day notice period required by the DVSA</a></li>
+    </ol>
+</nav>
+</article>
+</main>
+    <form action="Checknow.html" method="https://docs.google.com/spreadsheets/d/11vPsJd_ruqmfJmaxrz1AiOyrKv3mnT3UMl3Fm1li2Gk/edit?usp=sharing">
+        <label for="Testbooked">Have you booked a test already?</label>
+        <select name="Testbooked" id="Testbooked" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+        <br>
+        <label for="Currenttestdate">What is your current test date?</label>
+        <input type="datetime" id="Currenttestdate" name="Currenttestdate" required> 
+        <br>
+        <label for="Soonertest">Do you want a sooner test?</label>
+        <input type="radio" name="Soonertest" id="Yes" value="Yes" required>
+        <label for="Yes">Yes</label>
+        <input type="radio" name="Soonertest" id="No" value="No">
+        <label for="No">No</label>
+        <br>
+        <label for="Desiredtestmonth">Which month would you prefer a test to be in?</label>
+        <input type="month" id="Desiredtestmonth" name="Desiredtestmonth" required> 
+        <br>
+        <input type="checkbox" id="Start" name="Start">
+        <label for="Start">Start Searching!</label>
+        <br>
+        <input type="submit" value="Submit!">
+    </form>
+    <footer>
+        <h2>Driving Test Cancellations</h2>
+        <section>
+            <nav>
+                <ul id="footer-ul">
+                    <div>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Checknow.html">Check Now</a></li>
+                        <li><a href="Aboutus.html">About Us</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="Howtobookadrivingtest.html">How to book a driving test</a></li>
+                    </div>
+                    <div>
+                        <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+                        <li><a href="TermsandConditions.html">Terms and Conditions</a></li>
+                        <li><a href="CookiePolicy.html">Cookie Policy</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </section>
+    </footer>
+    </html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Checknowstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Checknowapp.js"></script>
+    <title>Automatic Driving Test Checker</title>
+</head>
+<body>
+    <header>
+        <h1 id="logo">Driving Test Cancellations</h1>
+        <nav>
+            <ul id="nav-ul">
+                <li><a href="index.html" class="navbutton" >Home</a></li>
+                <li><a href="Checknow.html" class="navbutton" >Check Now</a></li>
+                <li><a href="Aboutus.html" class="navbutton" >About Us</a></li>
+                <li><a href="Contact.html" class="navbutton" >Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 id="title1">Driving Test Cancellation Checker</h1>
+    <div id="checker">
+    <h2 class="title2">Check now</h2>
+    <label for="test-center">Enter Test Center:</label>
+    <input type="text" id="test-center" placeholder="e.g., London">
+    <button id="check-btn">Check for Cancellations!</button>
+    <p id="result">No cancellations found yet.</p>
+    <audio id="Cancellationsounds" src="Cancellationsounds.wav" preload="auto"></audio>
+    <script>
+        const checkButton = document.getElementById('check-btn');
+        let intervalId;
+        function checkForCancellations(testCenter) {
+            const result = document.getElementById('result');
+            if (testCenter.toLowerCase() === 'dreamland') {
+                result.innerText = "Yay! A cancellation is available in " + testCenter + "!";
+                const notificationSound = document.getElementById('notification-sound');
+                notificationSound.play();
+                notificationSound.volume = 1;
+            } else {
+                result.innerText = "Sorry, no cancellations available in " + testCenter + ".";
+            }
+        }
+        checkButton.addEventListener('click', function() {
+            let testCenter = document.getElementById('test-center').value.trim().toLowerCase();
+            if (testCenter) {
+                checkForCancellations(testCenter);
+                if (intervalId) {
+                    clearInterval(intervalId);
+                }
+                intervalId = setInterval(function() {
+                    checkForCancellations(testCenter);
+                }, 10000);
+            } else {
+                document.getElementById('result').innerText = "Please enter a valid test center.";
+            }
+        });
+    </script>
+    </div>
+    <a href="https://driverpracticaltest.dvsa.gov.uk/login" target="_blank">Change Your Driving Test</a>
+    <br><br>
+    <img src="https://pin.it/tDsIJ0KJE" alt="A Car Steering Wheel">
+    <hr>
+    <article id="art">
+        <h2 class="title2">Test Centres in the UK</h2>
+        <h3>A</h3>
+        <nav>
+            <ul>
+                <li><a href="" class="testcentre">Aberdeen North Test Centre</a></li>
+                <li><a href=""class="testcentre">Aberfeldy Test Centre</a></li>
+                <li><a href=""class="testcentre">Abergavenny Test Centre</a></li>
+                <li><a href=""class="testcentre">Aberystwyth (Park Avenue) Test Centre</a></li>
+                <li><a href=""class="testcentre">Airdrie Test Centre</a></li>
+                <li><a href=""class="testcentre">Alness Test Centre</a></li>
+                <li><a href=""class="testcentre">Alnwick Test Centre</a></li>
+                <li><a href=""class="testcentre">Arbroath Test Centre</a></li>
+                <li><a href=""class="testcentre">Ashford (Kent) Test Centre</a></li>
+                <li><a href=""class="testcentre">Ashford (Middlesex) Test Centre</a></li>
+                <li><a href=""class="testcentre">Atherton MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Aylesbury Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>B</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Bala Test Centre</a></li>
+                <li><a href=""class="testcentre">Ballater Test Centre</a></li>
+                <li><a href=""class="testcentre">Banbury Test Centre</a></li>
+                <li><a href=""class="testcentre">Banff Test Centre</a></li>
+                <li><a href=""class="testcentre">Bangor MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Barking Test Centre</a></li>
+                <li><a href=""class="testcentre">Barnet Test Centre</a></li>
+                <li><a href=""class="testcentre">Barnsley Test Centre</a></li>
+                <li><a href=""class="testcentre">Barnstaple Test Centre</a></li>
+                <li><a href=""class="testcentre">Barrow-In-Furness Test Centre</a></li>
+                <li><a href=""class="testcentre">Basildon MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Basingstoke Test Centre </a></li>
+                <li><a href=""class="testcentre">Bathgate Test Centre</a></li>
+                <li><a href=""class="testcentre">Bedford Test Centre</a></li>
+                <li><a href=""class="testcentre">Belvedere Test Centre</a></li>
+                <li><a href=""class="testcentre">Bettyhill Test Centre</a></li>
+                <li><a href=""class="testcentre">Beverley LGV Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham (Cocks Moor Woods) Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham (Kings Heath) Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham (Kingstanding) Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham (Shirley) Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham (South Yardley) Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham (Sutton Coldfield) Test Centre</a></li>
+                <li><a href=""class="testcentre">Birmingham Garretts Green MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Bishops Stortford Test Centre</a></li>
+                <li><a href=""class="testcentre">Blackburn with Darwen MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Bletchley Test Centre</a></li>
+                <li><a href=""class="testcentre">Blyth Test Centre</a></li>
+                <li><a href=""class="testcentre">Bodmin Test Centre</a></li>
+                <li><a href=""class="testcentre">Bolton Test Centre</a></li>
+                <li><a href=""class="testcentre">Borehamwood Test Centre</a></li>
+                <li><a href=""class="testcentre">Boston Test Centre</a></li>
+                <li><a href=""class="testcentre">Bournemouth Test Centre</a></li>
+                <li><a href=""class="testcentre">Bradford (Thornbury) Test Centre</a></li>
+                <li><a href=""class="testcentre">Bradford (Heaton) Test Centre</a></li>
+                <li><a href=""class="testcentre">Brecon Test Centre</a></li>
+                <li><a href=""class="testcentre">Brentwood Test Centre</a></li>
+                <li><a href=""class="testcentre">Bridgend Test Centre </a></li>
+                <li><a href=""class="testcentre">Bridlington Test Centre</a></li>
+                <li><a href=""class="testcentre">Bristol (Avonmouth) Test Centre</a></li>
+                <li><a href=""class="testcentre">Bristol (Brislington) Test Centre</a></li>
+                <li><a href=""class="testcentre">Bristol (Southmead) Test Centre</a></li>
+                <li><a href=""class="testcentre">Bristol MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Buckie Test Centre</a></li>
+                <li><a href=""class="testcentre">Burgess Hill MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Burton on Trent MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Bury (Lancs) Test Centre</a></li>
+                <li><a href=""class="testcentre">Bury St Edmunds Test Centre</a></li>
+                <li><a href=""class="testcentre">Buxton Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>C</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Callander Test Centre</a></li>
+                <li><a href=""class="testcentre">Cambridge (Brookmount Court) Test Centre</a></li>
+                <li><a href=""class="testcentre">Cambridge (Chesterton Road) Test Centre</a></li>
+                <li><a href=""class="testcentre">Cambridge (Cowley Road) Test Centre</a></li>
+                <li><a href=""class="testcentre">Campbeltown Test Centre</a></li>
+                <li><a href=""class="testcentre">Cannock Test Centre</a></li>
+                <li><a href=""class="testcentre">Canterbury Test Centre</a></li>
+                <li><a href=""class="testcentre">Cardiff (Llanishen) Test Centre</a></li>
+                <li><a href=""class="testcentre">Cardiff (Fairwater) Test Centre</a></li>
+                <li><a href=""class="testcentre">Cardigan Test Centre</a></li>
+                <li><a href=""class="testcentre">Carlisle MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Carmarthen Test Centre</a></li>
+                <li><a href=""class="testcentre">Castle Douglas Test Centre</a></li>
+                <li><a href=""class="testcentre">Cheetham Hill Test Centre</a></li>
+                <li><a href=""class="testcentre">Chelmsford (Hanbury Road) Test Centre</a></li>
+                <li><a href=""class="testcentre">Cheltenham Test Centre</a></li>
+                <li><a href=""class="testcentre">Chertsey Test Centre</a></li>
+                <li><a href=""class="testcentre">Chester MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Chesterfield Test Centre</a></li>
+                <li><a href=""class="testcentre">Chichester Test Centre</a></li>
+                <li><a href=""class="testcentre">Chingford Test Centre</a></li>
+                <li><a href=""class="testcentre">Chippenham Test Centre</a></li>
+                <li><a href=""class="testcentre">Chorley Test Centre</a></li>
+                <li><a href=""class="testcentre">Clacton-on-Sea Test Centre</a></li>
+                <li><a href=""class="testcentre">Colchester Test Centre </a></li>
+                <li><a href=""class="testcentre">Congleton Test Centre</a></li>
+                <li><a href=""class="testcentre">Coventry (Bayton Road) Test Centre</a></li>
+                <li><a href=""class="testcentre">Crawley Test Centre</a></li>
+                <li><a href=""class="testcentre">Crewe Test Centre</a></li>
+                <li><a href=""class="testcentre">Crieff Test Centre</a></li>
+                <li><a href=""class="testcentre">Croydon Test Centre</a></li>
+                <li><a href=""class="testcentre">Cumnock Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>D</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Darlington MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Derby (Sinfin Lane) Test Centre</a></li>
+                <li><a href=""class="testcentre">Doncaster Test Centre</a></li>
+                <li><a href=""class="testcentre">Dorchester Test Centre</a></li>
+                <li><a href=""class="testcentre">Dumbarton Test Centre</a></li>
+                <li><a href=""class="testcentre">Dumfries Test Centre</a></li>
+                <li><a href=""class="testcentre">Dundee Test Centre</a></li>
+                <li><a href=""class="testcentre">Dunfermline Test Centre</a></li>
+                <li><a href=""class="testcentre">Dunoon Test Centre</a></li>
+                <li><a href=""class="testcentre">Duns Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>E</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Eastbourne Test Centre</a></li>
+                <li><a href=""class="testcentre">Edinburgh (Currie) Test Centre</a></li>
+                <li><a href=""class="testcentre">Edinburgh (Musselburgh) MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Elgin Test Centre</a></li>
+                <li><a href=""class="testcentre">Elswick Test Centre</a></li>
+                <li><a href=""class="testcentre">Enfield LGV Test Centre</a></li>
+                <li><a href=""class="testcentre">Enfield MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Erith MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Exeter MPTC Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>F</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Failsworth Test Centre</a></li>
+                <li><a href=""class="testcentre">Falkirk Test Centre</a></li>
+                <li><a href=""class="testcentre">Farnborough (Aldershot) MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Folkestone Test Centre</a></li>
+                <li><a href=""class="testcentre">Forfar Test Centre</a></li>
+                <li><a href=""class="testcentre">Fort William Test Centre</a></li>
+                <li><a href=""class="testcentre">Fraserburgh Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>G</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Galashiels L + LGV Test Centre</a></li>
+                <li><a href=""class="testcentre">Garston (Speke) Test Centre</a></li>
+                <li><a href=""class="testcentre">Gateshead MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Gillingham L + LGV Test Centre</a></li>
+                <li><a href=""class="testcentre">Girvan Test Centre</a></li>
+                <li><a href=""class="testcentre">Glasgow (Anniesland) Test Centre</a></li>
+                <li><a href=""class="testcentre">Glasgow (Baillieston) Test Centre</a></li>
+                <li><a href=""class="testcentre">Glasgow (Shieldhall) MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Glasgow (Springburn Park) Test Centre</a></li>
+                <li><a href=""class="testcentre">Gloucester MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Golspie Test Centre</a></li>
+                <li><a href=""class="testcentre">Goodmayes Test Centre</a></li>
+                <li><a href=""class="testcentre">Grantham (Somerby) Test Centre</a></li>
+                <li><a href=""class="testcentre">Grantown-on-Spey Test Centre</a></li>
+                <li><a href=""class="testcentre">Gravesend Test Centre</a></li>
+                <li><a href=""class="testcentre">Greenford (Horsenden Lane) Test Centre</a></li>
+                <li><a href=""class="testcentre">Greenock Test Centre</a></li>
+                <li><a href=""class="testcentre">Grimsby (Coldwater) Test Centre</a></li>
+                <li><a href=""class="testcentre">Guildford L + LGV Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>H</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Haddington Test Centre</a></li>
+                <li><a href=""class="testcentre">Halifax Test Centre</a></li>
+                <li><a href=""class="testcentre">Hamilton Test Centre</a></li>
+                <li><a href=""class="testcentre">Harrogate Test Centre</a></li>
+                <li><a href=""class="testcentre">Hartlepool Test Centre</a></li>
+                <li><a href=""class="testcentre">Hastings Test Centre</a></li>
+                <li><a href=""class="testcentre">Hawick Test Centre</a></li>
+                <li><a href=""class="testcentre">Hayes (Middlesex) Test Centre</a></li>
+                <li><a href=""class="testcentre">Heckmondwike Test Centre</a></li>
+                <li><a href=""class="testcentre">Hendon Test Centre</a></li>
+                <li><a href=""class="testcentre">Hereford Test Centre</a></li>
+                <li><a href=""class="testcentre">Herne Bay MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Hexham Test Centre</a></li>
+                <li><a href=""class="testcentre">Heysham Test Centre</a></li>
+                <li><a href=""class="testcentre">High Wycombe (Bucks) Test Centre</a></li>
+                <li><a href=""class="testcentre">Hinckley Test Centre</a></li>
+                <li><a href=""class="testcentre">Hither Green Test Centre</a></li>
+                <li><a href=""class="testcentre">Hornchurch Test Centre</a></li>
+                <li><a href=""class="testcentre">Horsforth Test Centre</a></li>
+                <li><a href=""class="testcentre">Huddersfield Test Centre</a></li>
+                <li><a href=""class="testcentre">Hull MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Huntly Test Centre</a></li>
+                <li><a href=""class="testcentre">Hyde Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>I</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Inverness DTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Ipswich MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Islay Island Test Centre</a></li>
+                <li><a href=""class="testcentre">Isle of Islay (Port Ellen) Test Centre</a></li>
+                <li><a href=""class="testcentre">Isles of Scilly Test Centre</a></li>
+                <li><a href=""class="testcentre">Isleworth Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>J</h3>
+        <hr>
+        <h3>K</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Kelso Test Centre</a></li>
+                <li><a href=""class="testcentre">Kendal Test Centre</a></li>
+                <li><a href=""class="testcentre">Kettering MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Kilmarnock Test Centre</a></li>
+                <li><a href=""class="testcentre">Kings Lynn MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Kingussie Test Centre</a></li>
+                <li><a href=""class="testcentre">Kirkcaldy MPTC Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>L</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Lairg Test Centre</a></li>
+                <li><a href=""class="testcentre">Lampeter Test Centre</a></li>
+                <li><a href=""class="testcentre">Launceston Test Centre</a></li>
+                <li><a href=""class="testcentre">Lee on the Solent MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Leeds (Harehills) Test Centre</a></li>
+                <li><a href=""class="testcentre">Leicester (Gipsy Lane) Test Centre</a></li>
+                <li><a href=""class="testcentre">Leicester (South Wigston) MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Leighton Buzzard Test Centre</a></li>
+                <li><a href=""class="testcentre">Lerwick (Shetland) Test Centre</a></li>
+                <li><a href=""class="testcentre">Letchworth Test Centre</a></li>
+                <li><a href=""class="testcentre">Lichfield Test Centre</a></li>
+                <li><a href=""class="testcentre">Lincoln MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Llandrindod Wells Test Centre</a></li>
+                <li><a href=""class="testcentre">Llanelli Test Centre</a></li>
+                <li><a href=""class="testcentre">Lochgilphead Test Centre</a></li>
+                <li><a href=""class="testcentre">Longbenton Test Centre</a></li>
+                <li><a href=""class="testcentre">Loughborough Test Centre</a></li>
+                <li><a href=""class="testcentre">Loughton Test Centre</a></li>
+                <li><a href=""class="testcentre">Louth Test Centre</a></li>
+                <li><a href=""class="testcentre">Lower Gornal Test Centre</a></li>
+                <li><a href=""class="testcentre">Lowestoft Test Centre</a></li>
+                <li><a href=""class="testcentre">Ludlow Test Centre</a></li>
+                <li><a href=""class="testcentre">Luton Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>M</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Macclesfield Test Centre</a></li>
+                <li><a href=""class="testcentre">Maidstone Test Centre</a></li>
+                <li><a href=""class="testcentre">Mallaig Test Centre</a></li>
+                <li><a href=""class="testcentre">Malton Test Centre</a></li>
+                <li><a href=""class="testcentre">Melton Mowbray Test Centre</a></li>
+                <li><a href=""class="testcentre">Merthyr Tydfil Test Centre</a></li>
+                <li><a href=""class="testcentre">Middlesbrough Test Centre</a></li>
+                <li><a href=""class="testcentre">Mill Hill Test Centre</a></li>
+                <li><a href=""class="testcentre">Mitcham (London) Test Centre</a></li>
+                <li><a href=""class="testcentre">Monmouth Test Centre</a></li>
+                <li><a href=""class="testcentre">Montrose Test Centre</a></li>
+                <li><a href=""class="testcentre">Morden Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>N</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Nelson Test Centre</a></li>
+                <li><a href=""class="testcentre">Newbury Test Centre</a></li>
+                <li><a href=""class="testcentre">Newcastle-under-Lyme Test Centre</a></li>
+                <li><a href=""class="testcentre">Newport MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Newton Abbot Test Centre</a></li>
+                <li><a href=""class="testcentre">Norris Green Test Centre</a></li>
+                <li><a href=""class="testcentre">Northallerton Test Centre</a></li>
+                <li><a href=""class="testcentre">Northampton Test Centre</a></li>
+                <li><a href=""class="testcentre">Northwich (Northern) Test Centre</a></li>
+                <li><a href=""class="testcentre">Norwich MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Nottingham (Chalfont Drive) Test Centre</a></li>
+                <li><a href=""class="testcentre">Nottingham (Colwick) MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Nuneaton Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>O</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Oban Test Centre</a></li>
+                <li><a href=""class="testcentre">Orkney (Kirkwall) Test Centre</a></li>
+                <li><a href=""class="testcentre">Oxford (Cowley) Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>P</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Paisley Test Centre</a></li>
+                <li><a href=""class="testcentre">Peebles Test Centre</a></li>
+                <li><a href=""class="testcentre">Pembroke Dock Test Centre</a></li>
+                <li><a href=""class="testcentre">Penzance Test Centre</a></li>
+                <li><a href=""class="testcentre">Perth Test Centre</a></li>
+                <li><a href=""class="testcentre">Peterborough MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Peterhead Test Centre</a></li>
+                <li><a href=""class="testcentre">Pinner Test Centre</a></li>
+                <li><a href=""class="testcentre">Pitlochry Test Centre</a></li>
+                <li><a href=""class="testcentre">Plymouth MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Pontefract Test Centre</a></li>
+                <li><a href=""class="testcentre">Pontypridd Test Centre</a></li>
+                <li><a href=""class="testcentre">Portsmouth Test Centre</a></li>
+                <li><a href=""class="testcentre">Preston Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>Q</h3>
+        <hr>
+        <h3>R</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Reading Test Centre</a></li>
+                <li><a href=""class="testcentre">Reddish (Northern) Test Centre</a></li>
+                <li><a href=""class="testcentre">Redditch (Worcestershire) Test Centre</a></li>
+                <li><a href=""class="testcentre">Reigate Test Centre</a></li>
+                <li><a href=""class="testcentre">Rhyl Test Centre</a></li>
+                <li><a href=""class="testcentre">Rochdale Test Centre</a></li>
+                <li><a href=""class="testcentre">Rotherham MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Rothesay (Bute Island) Test Centre</a></li>
+                <li><a href=""class="testcentre">Rugby Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>S</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Sale Test Centre</a></li>
+                <li><a href=""class="testcentre">Salisbury Test Centre</a></li>
+                <li><a href=""class="testcentre">Saltcoats Test Centre</a></li>
+                <li><a href=""class="testcentre">Scunthorpe MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Sevenoaks Test Centre</a></li>
+                <li><a href=""class="testcentre">Sheffield (Handsworth) Test Centre</a></li>
+                <li><a href=""class="testcentre">Sheffield (Middlewood Road) Test Centre</a></li>
+                <li><a href=""class="testcentre">Sheffield (Parkway) Test Centre</a></li>
+                <li><a href=""class="testcentre">Shrewsbury MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Sidcup Test Centre</a></li>
+                <li><a href=""class="testcentre">Skegness Test Centre</a></li>
+                <li><a href=""class="testcentre">Skipton Test Centre</a></li>
+                <li><a href=""class="testcentre">Slough Test Centre</a></li>
+                <li><a href=""class="testcentre">South Norwood Test Centre</a></li>
+                <li><a href=""class="testcentre">South Shields Test Centre</a></li>
+                <li><a href=""class="testcentre">South Uist Island Test Centre</a></li>
+                <li><a href=""class="testcentre">Southall Test Centre</a></li>
+                <li><a href=""class="testcentre">Southampton (Forest Hills) Test Centre</a></li>
+                <li><a href=""class="testcentre">Southampton (Maybush) Test Centre</a></li>
+                <li><a href=""class="testcentre">Southport Test Centre</a></li>
+                <li><a href=""class="testcentre">St Albans Test Centre</a></li>
+                <li><a href=""class="testcentre">St Helens MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Stafford Test Centre</a></li>
+                <li><a href=""class="testcentre">Stevenage Test Centre</a></li>
+                <li><a href=""class="testcentre">Stirling Test Centre</a></li>
+                <li><a href=""class="testcentre">Stoke On Trent (Cobridge) Test Centre</a></li>
+                <li><a href=""class="testcentre">Stornoway (Lewis) Test Centre</a></li>
+                <li><a href=""class="testcentre">Sunderland Test Centre</a></li>
+                <li><a href=""class="testcentre">Sutton (Surrey) Test Centre</a></li>
+                <li><a href=""class="testcentre">Swansea MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Swindon MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Speke (Liverpool) Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>T</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Taunton Test Centre</a></li>
+                <li><a href=""class="testcentre">Telford Test Centre</a></li>
+                <li><a href=""class="testcentre">Thurso Test Centre</a></li>
+                <li><a href=""class="testcentre">Tilbury Test Centre</a></li>
+                <li><a href=""class="testcentre">Tolworth Test Centre</a></li>
+                <li><a href=""class="testcentre">Tunbridge Wells Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>U</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Ullapool Test Centre</a></li>
+                <li><a href=""class="testcentre">Upton Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>V</h3>
+        <hr>
+        <h3>W</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Wakefield Test Centre</a></li>
+                <li><a href=""class="testcentre">Wallasey Test Centre</a></li>
+                <li><a href=""class="testcentre">Wallington (Mint House) Test Centre</a></li>
+                <li><a href=""class="testcentre">Wanstead (Hermon Hill) Test Centre</a></li>
+                <li><a href=""class="testcentre">Warwick Test Centre</a></li>
+                <li><a href=""class="testcentre">Watford Test Centre</a></li>
+                <li><a href=""class="testcentre">Wednesbury Test Centre</a></li>
+                <li><a href=""class="testcentre">West Didsbury Test Centre</a></li>
+                <li><a href=""class="testcentre">West Wickham (Kent) Test Centre</a></li>
+                <li><a href=""class="testcentre">Weston-Super-Mare Test Centre</a></li>
+                <li><a href=""class="testcentre">Whitby Test Centre</a></li>
+                <li><a href=""class="testcentre">Whitchurch Test Centre</a></li>
+                <li><a href=""class="testcentre">Wick MPTC Test Centre</a></li>
+                <li><a href=""class="testcentre">Widnes Test Centre</a></li>
+                <li><a href=""class="testcentre">Winchester Test Centre</a></li>
+                <li><a href=""class="testcentre">Wolverhampton Test Centre</a></li>
+                <li><a href=""class="testcentre">Wood Green Test Centre</a></li>
+                <li><a href=""class="testcentre">Worcester Test Centre</a></li>
+                <li><a href=""class="testcentre">Workington Test Centre</a></li>
+                <li><a href=""class="testcentre">Worksop Test Centre</a></li>
+                <li><a href=""class="testcentre">Worthing Test Centre</a></li>
+                <li><a href=""class="testcentre">Wrexham Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>X</h3>
+        <hr>
+        <h3>Y</h3>
+        <nav>
+            <ul>
+                <li><a href=""class="testcentre">Yeovil Test Centre</a></li>
+                <li><a href=""class="testcentre">York Test Centre</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h3>Z</h3>
+        <hr>
+        <h5>Correct as of 10th September 2024</h5>
+    </article>
+</body>
+<footer>
+    <h2>Driving Test Cancellations</h2>
+    <section>
+        <nav>
+            <ul id="footer-ul">
+                <div>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Checknow.html">Check Now</a></li>
+                    <li><a href="Aboutus.html">About Us</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Howtobookadrivingtest.html">How to book a driving test</a></li>
+                </div>
+                <div>
+                    <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+                    <li><a href="TermsandConditions.html">Terms and Conditions</a></li>
+                    <li><a href="CookiePolicy.html">Cookie Policy</a></li>
+                </div>
+            </ul>
+        </nav>
+    </section>
+</footer>
+</html>

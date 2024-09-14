@@ -1,0 +1,129 @@
+body{
+    background-color: #dfebff;
+    font-family: "Fredoka One", cursive, Georgia;
+    margin: 0px;
+    font-size: 1.5svw;
+}
+#logo {
+    margin: 0px;
+    padding: 10px;
+    font-family: fantasy, 'Lucida Sans';
+    width: 12%;
+    border-radius: 45%;
+    text-shadow: 
+    1px 1px 0px #bdb2ff, /* Bottom-right shadow */
+    -1px 1px 0px #bdb2ff, /* Bottom-left shadow */
+    1px -1px 0px lightskyblue, /* Top-right shadow */
+    -1px -1px 0px lightskyblue; /* Top-left shadow */
+}
+ul {
+    margin: 0px;
+    padding: 10px;
+}
+body > header{
+    background-color: #caffbf;
+    color: rgb(2, 2, 56);
+    display: flex;
+    height: 25vh;
+    align-items: center;
+    justify-content: space-around;
+}
+#nav-ul {
+    display: flex;
+}
+#nav-ul > li {
+    padding: 8px;
+    margin: 16px;
+}
+body > header > nav > ul {
+  list-style: none;
+  text-decoration: none;  
+}
+.navbutton {
+    color: #000000;
+    text-shadow: 
+    1px 1px 0px #fdfee1, /* Bottom-right shadow */
+    -1px 1px 0px #fdfee1, /* Bottom-left shadow */
+    1px -1px 0px #fdfee1, /* Top-right shadow */
+    -1px -1px 0px #fdfee1; /* Top-left shadow */
+    text-decoration: none;
+    padding: 12px;
+    border: 1px solid #ffa73c;
+    border-radius: 10%;
+}
+body > main article {
+    width: 70%;
+    margin: auto;
+}
+#main-content {
+  display: flex;  
+  justify-content: space-around;
+}
+#main-content > div {
+    width: 75%;
+}
+form {
+    text-align: center;
+    background-color: #fcc7c7;
+}
+#form_header {
+    text-align: center;
+    background-color: #fcc7c7;
+    margin: 0px;
+}
+h2 {
+    text-align: center;
+}
+body > footer{
+    background-color: #fcd4fc;
+    display: flex;
+}
+#footer-ul {
+    display: flex;
+    list-style: none;
+}
+#footer-ul > div > li {
+    margin-left: 15px;
+}
+#footer-ul > div > li > a {
+    color: #bdb2ff;
+    text-decoration: none;
+}
+img {
+    border-radius: 100% ;
+}
+#title { text-align: center;
+}
+#title2 {
+    text-align: center;
+    color: #a00c0c;
+}
+#title3 {
+    color: rgb(255, 186, 96);
+    text-align: center;
+}
+h4 {
+    font-size: large;
+    color: #ff2159;
+}
+p {
+    text-align: center;
+}
+.list {
+    text-decoration: none;
+    color: #0e5e00;
+    text-align: center;
+}
+.list2 {
+    display: flex;
+    text-decoration: none;
+    color: #860186;
+}
+#main-content aside {
+    margin: 10%;
+    border: #000000;
+    padding: 10px;
+    font-family: fantasy, 'Lucida Sans';
+    width: 30%;
+    border-radius: 20%;
+}
